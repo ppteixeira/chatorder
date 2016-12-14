@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   resources :chat_rooms, only: [:new, :create, :show, :index]
 
-  root 'chat_rooms#index'
+#  root 'chat_rooms#index'
+  root 'pages#index'
 end
