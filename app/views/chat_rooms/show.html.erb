@@ -1,7 +1,6 @@
-
 <h1><%= @chat_room.title %></h1>
 
-                     <!-- providing the room’s id -->
+ <!-- providing the room’s id -->
 <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
   <%= render @chat_room.messages %>
 </div>
@@ -9,7 +8,7 @@
 <hr>
 
 <%= form_for @message, url: '#' do |f| %>
-  <%= hidden_field_tag 'data-chat-room-id', @chat_room.id %>
+  <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
   <div class="form-group">
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control' %>

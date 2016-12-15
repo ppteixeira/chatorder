@@ -17,6 +17,10 @@
 
 @import "bootstrap";
 
+body {
+  background-color: #327300;
+}
+
 #messages {
   max-height: 450px;
   overflow-y: auto;
