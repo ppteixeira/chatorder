@@ -35,8 +35,8 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha3'
 # Redis IO. Read more: https://redis.io/
 gem 'redis', '~> 3.2'
-
-
+# Bootstrap tooltips
+gem 'rails-assets-tether', '>= 1.1.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
