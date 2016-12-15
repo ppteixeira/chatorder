@@ -5,8 +5,8 @@
         <%= gravatar_for message.user %>
       </div>
       <div class="col-md-11">
-        <p class="card-text">
-          <span class="text-muted"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
+        <p class="card-text msgtext">
+          <span class="text-muted msgheader"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
           <%= message.body %>
         </p>
       </div>

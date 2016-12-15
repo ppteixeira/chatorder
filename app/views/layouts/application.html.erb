@@ -3,35 +3,18 @@
   <head>
     <title>WdiChat</title>
     <%= csrf_meta_tags %>
-
+    <%= render 'layouts/links' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <nav class="navbar navbar-dark bg-inverse custom-nav">
-    <%= link_to 'CableChat', root_path, class: 'navbar-brand' %>
-
-    <ul class="nav navbar-nav pull-xs-right">
-      <% if user_signed_in? %>
-      <li class="nav-item">
-        <span class="text-muted">Logged in as <strong><%= current_user.name %></strong></span>
-      </li>
-      <li class="nav-item"><%= link_to 'Logout', destroy_user_session_path, :method => :delete %> </li>
-      <li class="nav-item"><%= link_to 'Chat', 'chat_rooms#index' %></li>
-      <% else %>
-      <li class="nav-item"><%= link_to 'Sign up', new_user_registration_path %></li>
-      <li class="nav-item"><%= link_to 'Sign in', new_user_session_path %></li>
-    </ul>
-  <% end %>
-</nav>
-
-
-    <ul>
-
-    </ul>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <div class="container">
+      <%= render 'layouts/navbar' %>
+    </div>
 
     <div class="container">
+      <div class="space"></div>
       <%= yield %>
     </div>
   </body>
