@@ -363,6 +363,10 @@ a {
     border: 2px solid #ffffff;
     padding: .5em;
     cursor: pointer;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+    transition: color 1.5s;
   }
   .actions input:hover {
     background: -webkit-linear-gradient(#b3fc17, #658b14); /* For Safari 5.1 to 6.0 */
@@ -370,10 +374,7 @@ a {
     background: -moz-linear-gradient(#b3fc17, #658b14); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#b3fc17, #658b14); /* Standard syntax (must be last) */
     color: #133047;
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-    transition: color 1.5s;
+
   }
 
 }
