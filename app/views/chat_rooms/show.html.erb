@@ -1,6 +1,4 @@
-<div class="space">
 
-</div>
 
 <h1><%= @chat_room.title %></h1>
 
@@ -11,6 +9,7 @@
 
 <hr>
 
+<!-- New Message -->
 <%= form_for @message, url: '#' do |f| %>
   <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
   <div class="form-group msgbox">
@@ -18,6 +17,5 @@
     <%= f.text_area :body, class: 'form-control', rows: 5 %>
     <small class="text-muted">From 2 to 1000 characters</small>
   </div>
-
   <%= f.submit "Post", class: 'btn btn-primary btn-lg sendbtn'%>
 <% end %>

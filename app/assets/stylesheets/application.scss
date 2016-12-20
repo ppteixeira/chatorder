@@ -16,35 +16,6 @@
  */
 
 
-//
-// body {
-//   background-color: black;
-//
-// }
-//
-//
-// #messages {
-//   max-height: 450px;
-//   overflow-y: auto;
-//   background-image: img_tag('msgbackground.jpg');
-//   padding: 2em;
-//   box-shadow: 5px 6px 10px 3px #4e4e4e;
-//   .avatar {
-//     margin: 0.5rem;
-//   }
-// }
-//
-//
-// .window {
-//   padding: 3em;
-//   background-color: #e4dfdf;
-//   border: 1px solid black;
-//   box-shadow: 4px 5px 5px 2px #909090;
-//   width: 30%;
-//   margin: 0 auto;
-//   margin-top: 4em;
-//
-// }
 @import "variables";
 @import "mixins";
 
@@ -128,6 +99,7 @@ a {
     }
     .nav {
         li {
+            margin-right: 2em;
             a {
                 -webkit-transition: background .3s ease-in-out;
                 -moz-transition: background .3s ease-in-out;
@@ -177,7 +149,7 @@ a {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+
     background-color: black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -297,7 +269,7 @@ a {
 }
 
 .space {
-  height: 3em;
+  height: 8em;
 }
 
 #map {
@@ -385,7 +357,7 @@ a {
 
 @media(min-width:767px) {
     .content-section {
-        padding-top: 250px;
+        padding-top: 3em;
     }
 
     .download-section {

@@ -28,7 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+# Tether IO
+gem 'rails-assets-tether', '>= 1.1.0'
 #User registration and authentification. Read more: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
 #Bootstrap CSS Framework. Read more: http://getbootstrap.com/
