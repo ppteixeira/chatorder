@@ -19,6 +19,8 @@ class ChatRoomsController < ApplicationController
 
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
+    #Messages to be rendered are only the ones created after user enter room
+    @messages = @chat_room.messages.where(created_at: Time.now..Time.now)
     @message = Message.new
   end
 
