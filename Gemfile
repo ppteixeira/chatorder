@@ -33,13 +33,18 @@ gem 'rails-assets-tether', '>= 1.1.0'
 #User registration and authentification. Read more: https://github.com/plataformatec/devise#getting-started
 gem 'devise'
 #Bootstrap CSS Framework. Read more: http://getbootstrap.com/
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 # Redis IO. Read more: https://redis.io/
 gem 'redis', '~> 3.2'
-# Bootstrap tooltips
-gem 'rails-assets-tether', '>= 1.1.0'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Font awesome for Icons
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+
+gem 'pry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

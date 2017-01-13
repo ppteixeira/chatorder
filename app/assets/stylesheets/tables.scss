@@ -1,7 +1,3 @@
-// Place all the styles related to the tables controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .group-content {
   height: auto;
   width: 15em;
@@ -23,12 +19,9 @@
   font-size: 2em;
   span {
     position: inherit;
-    /* text-align: center; */
     font-size: 2em;
     font-weight: bold;
     color: #FF0000;
-
-
   }
 }
 
@@ -46,11 +39,12 @@
 }
 
 .pin {
-  display: block;
-  font-size: 2em;
+  display: inline;
+  font-size: 1.5em;
   text-align: center;
   font-weight: bold;
   height: 2em;
+  color: #7abaff;
 }
 
 
@@ -72,6 +66,7 @@
       color: #ff0000;
     }
   }
+
   .btn-options {
     display: inline-block;
     color: #055558;
@@ -82,7 +77,6 @@
     width: 15em;
     background-color: rgba(#efff37, 0.66);
     border-radius: 5px;
-
   }
 
 }

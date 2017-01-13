@@ -1,5 +1,26 @@
+<ul>
+  <%= render @tables.order('id ASC') %>
+</ul>
 
+<script>
+$( '.btn-key' ).click(function(event) {
+    event.preventDefault();  // Prevent the button to send the form
+    var id = $(this).closest('li').attr('id');
+    var options = { // Details to connect to the server
+      url: '/change_pin',
+      method: 'post',
+      data: { table_id: $(this).closest('li').attr('id') }
+    }
 
+    var show_pin = function(response) { // function that
+      //look up for right id and write response
+      $('#'+id).find('.pin').text(response)
+    }
+
+    $.ajax(options).done(show_pin);
+  });
+</script>
+<!--
 
     <div class="group-content">
       <div id="table-1" class="table-icon" >
@@ -89,4 +110,4 @@
       <span id="pin-10" class="pin"></span>
       <span class="btn-key btn-options"><i class="fa fa-key btn-options btn-key" aria-hidden="true"></i></span>
       <span class="btn-chat btn-options"><i class="fa fa-comment-o " aria-hidden="true"></i></span>
-    </div>
+    </div> -->

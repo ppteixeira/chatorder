@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   #Show all tables
   get '/tables', to: 'pages#tables'
+
+  post '/change_pin', to: 'api/chat_rooms#change_pin'
 end
