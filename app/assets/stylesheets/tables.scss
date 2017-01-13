@@ -1,0 +1,88 @@
+// Place all the styles related to the tables controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.group-content {
+  height: auto;
+  width: 15em;
+  background-color: rgba(#efff37, 0.66);
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.table-icon {
+  height: 6em;
+  width: 6em;
+  background-image: image-url("table.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2em;
+  span {
+    position: inherit;
+    /* text-align: center; */
+    font-size: 2em;
+    font-weight: bold;
+    color: #FF0000;
+
+
+  }
+}
+
+.btn-options {
+  font-size: 4em;
+  color: #055558;
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.btn-chat {
+  float: right;
+}
+
+.pin {
+  display: block;
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  height: 2em;
+}
+
+
+@media screen and (min-width: 615px) {
+
+  .table-icon {
+    height: 6em;
+    width: 6em;
+    background-image: image-url("table.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 15px;
+
+    text-align: center;
+    font-size: 2em;
+    span {
+      font-size: 2em;
+      font-weight: bold;
+      color: #ff0000;
+    }
+  }
+  .btn-options {
+    display: inline-block;
+    color: #055558;
+  }
+
+  .group-content {
+    height: auto;
+    width: 15em;
+    background-color: rgba(#efff37, 0.66);
+    border-radius: 5px;
+
+  }
+
+}

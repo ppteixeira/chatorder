@@ -10,4 +10,7 @@ Rails.application.routes.draw do
 
 #  root 'chat_rooms#index'
   root 'pages#index'
+
+  #Show all tables
+  get '/tables', to: 'pages#tables'
 end
