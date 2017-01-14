@@ -2,6 +2,21 @@ class Api::ChatRoomsController < ApplicationController
   def index
       chat_rooms = ChatRoom.all
       render json: chat_rooms.to_json
+
+  end
+
+  def check_pin
+    chat_room = ChatRoom.find_by( pin: params[:pin] )
+
+    if !chat_room
+      render json: 'false'.to_json
+    else
+      redirect_to :controller => 'chat_rooms',
+      :action => 'show',
+      :id => chat_room.id, #chat_room id
+      :user_id => '2',
+      :found => "success"
+    end
   end
 
   def change_pin

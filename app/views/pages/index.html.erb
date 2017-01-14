@@ -1,3 +1,8 @@
+<%= form_tag('/check_pin') do %>
+  <label id="pin-label">Enter PIN here!</label>
+  <input id="pin-code" type="text" name="pin" value="">
+  <%= submit_tag("Enter", :id => "check-pin-btn") %>
+<% end %>
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
@@ -41,3 +46,24 @@
 
     <!-- Theme JavaScript -->
     <!-- <script src="../../assets/javascripts/grayscale.min.js"></script> -->
+
+    <!-- <script>
+    $( '#check-pin-btn' ).click(function(event) {
+        event.preventDefault();  // Prevent the button to send the form
+        debugger
+        var options = { // Details to connect to the server
+          url: '/check_pin',
+          method: 'get',
+          data: { pin: $("#pin-code").val() }
+        }
+
+        var error = function(response) {
+          if (response === "false") {
+            $('#pin-label').text("Invalid PIN, try again...")
+          }else {
+            $('#pin-label').text("Correct PIN!")
+          }
+        }
+        $.ajax(options).done(error);
+      });
+    </script> -->

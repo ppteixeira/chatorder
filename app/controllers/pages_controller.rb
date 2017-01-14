@@ -7,4 +7,6 @@ class PagesController < ApplicationController
   def tables
     @tables = ChatRoom.all
   end
+
+
 end

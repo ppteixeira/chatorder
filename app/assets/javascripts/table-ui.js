@@ -1,20 +1,20 @@
 
 $(document).ready(function() {
 
-      // 
-      // $('.btn-key').on('click', function() {
-      //
-      //   // find out table_id of the selected button
-      //   // var tableid = $(this).closest('div').children('div').attr('id').replace('table-','');
-      //
-      //   // create new pin code
-      //   var randomstring = Math.random().toString(36).slice(-8);
-      //   console.log(randomstring);
-      //
-      //   // write the pin on the card
-      //   $(this).closest('li').find('.pin').text(randomstring)
-      // });
+  $( '.btn-key' ).click(function(event) {
+      event.preventDefault();  // Prevent the button to send the form
+      var id = $(this).closest('li').attr('id');
+      var options = { // Details to connect to the server
+        url: '/change_pin',
+        method: 'post',
+        data: { table_id: $(this).closest('li').attr('id') }
+      }
 
+      var show_pin = function(response) { // function that
+        //look up for right id and write response
+        $('#'+id).find('.pin').text(response)
+      }
 
-
+      $.ajax(options).done(show_pin);
+    });
 });
