@@ -8,19 +8,25 @@
           Logged in as <%= current_user.name %>
           <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
           <%= link_to 'Chat', chat_rooms_path %>
-        <% end %>
-        <li class="sidebar-brand">
-            <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
+        <li class="sidebar-brand logged-user">
+            Logged in as <%= current_user.username.upcase %>
         </li>
+        <% end %>
+        <% if user_signed_in? && current_user.user_type == 'admin' %>
+          <li>
+            <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+          </li>
+          <li>
+              <a href="/tables" onclick=$("#menu-close").click();>Tables</a>
+          </li>
+        <% end %>
         <li>
             <a href="#top" onclick=$("#menu-close").click();>Home</a>
         </li>
         <li>
             <a href="#about" onclick=$("#menu-close").click();>About</a>
         </li>
-        <li>
-            <a href="#services" onclick=$("#menu-close").click();>Services</a>
-        </li>
+
         <li>
             <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
         </li>

@@ -1,11 +1,13 @@
 <!-- Header -->
 <header id="top" class="header">
-    <div class="text-vertical-center">
-        <h1>Start Bootstrap</h1>
-        <h3>Free Bootstrap Themes &amp; Templates</h3>
+  <div class="header-layer">
+    <div class="top-title">
+        <h1>My Restaurant</h1>
+        <h3>Application to order in-house via chat</h3>
         <br>
         <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
     </div>
+  </div>
 </header>
 
 <!-- About -->
@@ -29,7 +31,7 @@
 
 <!-- Services -->
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-<section id="services" class="services bg-primary">
+<!-- <section id="services" class="services bg-primary">
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-10 col-lg-offset-1">
@@ -43,7 +45,7 @@
                             <i class="fa fa-cloud fa-stack-1x text-primary"></i>
                         </span>
                             <h4>
-                                <strong>Service Name</strong>
+                                <strong>Breakfast</strong>
                             </h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <a href="#" class="btn btn-light">Learn More</a>
@@ -56,7 +58,7 @@
                             <i class="fa fa-compass fa-stack-1x text-primary"></i>
                         </span>
                             <h4>
-                                <strong>Service Name</strong>
+                                <strong>Lunch</strong>
                             </h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                             <a href="#" class="btn btn-light">Learn More</a>
@@ -96,12 +98,12 @@
         <!-- /.row -->
     </div>
     <!-- /.container -->
-</section>
+</section> -->
 
 <!-- Callout -->
 <aside class="callout">
-    <div class="text-vertical-center">
-        <h1>Vertically Centered Text</h1>
+    <div class="text-vertical-center callout-layer">
+        <h1>Best Coffee in Melbourne</h1>
     </div>
 </aside>
 
@@ -116,28 +118,28 @@
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                              <%= image_tag('portfolio-1' , :class => "img-portfolio img-responsive") %>
+                              <%= image_tag('Smashed Avo' , :class => "img-portfolio img-responsive") %>
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <%= image_tag('portfolio-2' , :class => "img-portfolio img-responsive") %>
+                                <%= image_tag('croquette' , :class => "img-portfolio img-responsive") %>
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <%= image_tag('portfolio-3' , :class => "img-portfolio img-responsive") %>
+                                <%= image_tag('bananabread' , :class => "img-portfolio img-responsive") %>
                             </a>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="portfolio-item">
                             <a href="#">
-                                <%= image_tag('portfolio-4' , :class => "img-portfolio img-responsive") %>
+                                <%= image_tag('tiramissu' , :class => "img-portfolio img-responsive") %>
                             </a>
                         </div>
                     </div>
@@ -157,9 +159,16 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h3>The buttons below are impossible to resist.</h3>
-                <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                <h3>Open hours:</h3>
+                <ul class="open-hours">
+                  <li>Mon - Fri</li>
+                  <li>7am - 4pm</li>
+                </ul>
+                <ul class="open-hours">
+                  <li>Sat - Sun</li>
+                  <li>7am - 4pm</li>
+                </ul>
+
             </div>
         </div>
     </div>
@@ -167,11 +176,16 @@
 
 <!-- Map -->
 <section id="contact" class="map">
-    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+    <!-- <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+   -->
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6303.665639256836!2d144.95535362791676!3d-37.81738468513806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b33fa08005%3A0x5b4ce751bc4d46f6!2sGeneral+Assembly+Melbourne!5e0!3m2!1sen!2sau!4v1484563119970"></iframe>
+
     <br />
     <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
+        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6303.665639256836!2d144.95535362791676!3d-37.81738468513806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b33fa08005%3A0x5b4ce751bc4d46f6!2sGeneral+Assembly+Melbourne!5e0!3m2!1sen!2sau!4v1484563119970"></a>
     </small>
+
+    AIzaSyD4HM-4dgk-Ck9XrB6YylBEyli9U6UmnSg
 </section>
 
 <!-- Footer -->

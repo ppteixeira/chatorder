@@ -1,15 +1,21 @@
 <div class="card">
   <div class="card-block">
     <div class="row">
-       <!-- User image -->
-      <div class="col-md-1">
+
+      <!-- User image -->
+      <div class="card-image col-md-2">
         <%= gravatar_for message.user %>
+        <span class="text-muted msgheader"><%= message.user.name %> at <%= message.timestamp %>:</span><br>
+
       </div>
-      <div class="col-md-11">
-        <p class="card-text msgtext">
-          <!-- Message metadata -->
-          <span class="text-muted msgheader"><%= message.user.name %> at <%= message.timestamp %> says</span><br>
-          <!-- Message body -->
+
+      <!-- Text -->
+      <div class="col-md-10">
+
+        <!-- Message metadata -->
+
+        <!-- Message body -->
+        <p class="card-text">
           <%= message.body %>
         </p>
       </div>

@@ -4,23 +4,78 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  h2 {
+    padding-top: 0.5em;
+    font-size: 4em
+  }
 }
 
 #messages {
-  max-height: 400px;
+  max-height: 70%;
+  height: 50%;
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.65);
+  margin-top: 15%;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-top: 1em;
   .avatar {
     margin: 0.3rem;
   }
 }
 
-.chat-msg-panel {
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 85%;
+#new_message {
+
   position: fixed;
   bottom: 0;
+  width: 90%;
+}
+
+.chat-msg-panel {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 100vh;
   width: 100%;
+  color: #FFF;
+
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.msgbox{
+  width: 70%;
+  display: inline-block;
+}
+
+.msgheader {
+  font-size: 0.8em;
+}
+
+.msgtext {
+  color: black;
+  font-size: 0.8em;
+}
+
+.sendbtn {
+  display: inline-block;
+}
+
+.card {
+  margin-bottom: 1em;
+
+
+  .card-image{
+
+
+  }
+  .card-text{
+    font-size: 1.3em;
+    color: #000;
+  }
+
+  .msgheader {
+  font-size: 0.8em;
+  }
 }
