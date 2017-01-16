@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Order App</title>
     <%= csrf_meta_tags %>
@@ -8,14 +8,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    <div class="container">
-      <%= render 'layouts/navbar' %>
-    </div>
+  <body>
 
-    <div class="container">
-      <div class="space"></div>
+      <%= render 'layouts/navbar' %>
+
       <%= yield %>
-    </div>
+
   </body>
 </html>

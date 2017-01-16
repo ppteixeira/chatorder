@@ -1,11 +1,14 @@
-<li class="list-icon" id="<%= chat_room.id %>"> Table - <%=  chat_room.id %>
+<li class="list-icon" id="<%= chat_room.id %>">
 
-  <button type="button" class="btn-key btn btn-default" aria-label="Left Align">
-    Generate Password
-  </button>
+  <span class="table-title">Table - <%=  chat_room.id %></span>
 
   <button type="button" class="btn btn-default" aria-label="Left Align">
+    <i class="fa fa-comment" id="chat-<%= chat_room.id %>"></i>
     <%= link_to "Chat - #{chat_room.title}", chat_room_path(chat_room) %>
+  </button>
+
+  <button type="button" class="btn-key btn btn-default" aria-label="Left Align">
+    <i class="fa fa-key"></i> Generate Code
   </button>
 
   <span class="pin"><%= chat_room.pin %></span>

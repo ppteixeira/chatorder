@@ -1,21 +1,32 @@
+<section id="chat-window" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center chat-msg-panel">
+              <p><%= @chat_room.title %></p>
 
+               <!-- providing the room’s id -->
+              <div id="messages" data-chat-room-id="<%= @chat_room.id %>">
+                <%= render @messages %>
+              </div>
 
-<h1><%= @chat_room.title %></h1>
+              <hr>
 
- <!-- providing the room’s id -->
-<div id="messages" data-chat-room-id="<%= @chat_room.id %>">
-  <%= render @messages %>
-</div>
+              <!-- New Message -->
+              <%= form_for @message, url: '#' do |f| %>
+                <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
+                <div class="form-group msgbox">
+                  <%= f.label :Message %>
+                  <%= f.text_area :body,
+                                  class: 'form-control',
+                                  rows: 2,
+                                  placeholder: 'Type your message...' %>
 
-<hr>
-
-<!-- New Message -->
-<%= form_for @message, url: '#' do |f| %>
-  <%= hidden_field_tag 'chat_room_id', @chat_room.id %>
-  <div class="form-group msgbox">
-    <%= f.label :Message %>
-    <%= f.text_area :body, class: 'form-control', rows: 5 %>
-    <small class="text-muted">From 2 to 1000 characters</small>
-  </div>
-  <%= f.submit "Post", class: 'btn btn-primary btn-lg sendbtn'%>
-<% end %>
+                </div>
+                <%= f.submit "Post", class: 'btn btn-primary btn-lg sendbtn'%>
+              <% end %>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>

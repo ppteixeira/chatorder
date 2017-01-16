@@ -40,7 +40,7 @@ gem 'redis', '~> 3.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # Font awesome for Icons
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'font-awesome-sass'
 
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 

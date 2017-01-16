@@ -1,9 +1,31 @@
 
-<% if user_signed_in? %>
-    Logged in as <%= current_user.name %>
-    <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-    <%= link_to 'Chat', chat_rooms_path %>
-<% else %>
-  <%= link_to 'Sign up', new_user_registration_path %><
-  <%= link_to 'Log in', new_user_session_path %>
-<% end %>
+
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+<nav id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+        <% if user_signed_in? %>
+          Logged in as <%= current_user.name %>
+          <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+          <%= link_to 'Chat', chat_rooms_path %>
+        <% end %>
+        <li class="sidebar-brand">
+            <a href="#top" onclick=$("#menu-close").click();>Start Bootstrap</a>
+        </li>
+        <li>
+            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+        </li>
+        <li>
+            <a href="#about" onclick=$("#menu-close").click();>About</a>
+        </li>
+        <li>
+            <a href="#services" onclick=$("#menu-close").click();>Services</a>
+        </li>
+        <li>
+            <a href="#portfolio" onclick=$("#menu-close").click();>Portfolio</a>
+        </li>
+        <li>
+            <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+        </li>
+    </ul>
+</nav>
