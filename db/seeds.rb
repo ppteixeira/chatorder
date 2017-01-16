@@ -8,14 +8,14 @@
 
 staff = User.new
 staff.email = 'stafforderapp@gmail.com'
-staff.encrypted_password = '$2a$11$BdGhK1yai5vr5Q.4vEfP5ejCemlDqn3quHrlLrszI5T4TMzzka/de'
+staff.password = 'staff123'
 staff.user_type = 'admin'
 staff.username = 'staff'
 staff.save!
 
 guest = User.new
 guest.email = 'guestorderapp@gmail.com'
-guest.encrypted_password = '$2a$11$RzLSwKJbgawbz22deNqJmebZLYAl3jSNcIqnhj07EW3S8hvJegD72'
+guest.password = 'guest123'
 guest.user_type = 'guest'
 guest.username = 'customer'
 guest.save!
