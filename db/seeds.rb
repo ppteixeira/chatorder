@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+staff = User.new
+staff.email = 'stafforderapp@gmail.com'
+staff.encrypted_password = '$2a$11$BdGhK1yai5vr5Q.4vEfP5ejCemlDqn3quHrlLrszI5T4TMzzka/de'
+staff.user_type = 'admin'
+staff.username = 'staff'
+staff.save!
+
+guest = User.new
+guest.email = 'guestorderapp@gmail.com'
+guest.encrypted_password = '$2a$11$RzLSwKJbgawbz22deNqJmebZLYAl3jSNcIqnhj07EW3S8hvJegD72'
+guest.user_type = 'guest'
+guest.username = 'customer'
+guest.save!
+
 
 
 Item.create(name: "Maple Chia Pudding",
@@ -57,8 +71,7 @@ Item.create(name: "Mashed Avo",
             category: "Breakfast",
             item_type: "Food",
             price: "18",
-            description: "Mashed Avocado, grilled haloumi, poached eggs, lemon,
-pea tendrils, dukkah, seeds, multigrain toast ")
+            description: "Mashed Avocado, grilled haloumi, poached eggs, lemon, pea tendrils, dukkah, seeds, multigrain toast ")
 Item.create(name: "Free Range Eggs",
             category: "Breakfast",
             item_type: "Food",
@@ -118,8 +131,7 @@ Item.create(name: "White Chocolate Cheesecake",
             category: "Desert",
             item_type: "Food",
             price: "11",
-            description: "Clementine curd, smashed amaretti,
-pomegranate & mint")
+            description: "Clementine curd, smashed amaretti, pomegranate & mint")
 Item.create(name: "Pure Blond",
             category: "Beer",
             item_type: "Drink",

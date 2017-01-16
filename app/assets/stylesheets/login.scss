@@ -1,0 +1,44 @@
+.window {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5em;
+  background-color: #2a2a2a;
+  padding: 3em;
+  border: 1px solid #ffffff;
+  background: #383838; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, black, #141414, black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, black, #141414, black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, black, #141414, black); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right,  black, #141414, black); /* Standard syntax (must be last) */
+  box-shadow: 5px 5px 20px -3px #4c4c4c;
+  input {
+    margin: 0.4em;
+  }
+  .actions input{
+    background: -webkit-linear-gradient(#fc7717, #b9560e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fc7717, #b9560e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fc7717, #b9560e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fc7717, #b9560e); /* Standard syntax (must be last) */
+    color: #000000;
+    font-weight: bold;
+    border: 2px solid #ffffff;
+    padding: .5em;
+    cursor: pointer;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+    transition: color 1.5s;
+  }
+  .actions input:hover {
+    background: -webkit-linear-gradient(#b3fc17, #658b14); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#b3fc17, #658b14); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#b3fc17, #658b14); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#b3fc17, #658b14); /* Standard syntax (must be last) */
+    color: #133047;
+
+  }
+  h2,label{
+    color: #FFF
+  }
+}

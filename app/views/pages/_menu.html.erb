@@ -1,13 +1,38 @@
-<div class="house-menu" >
+<div id="house-menu" class="house-menu" >
+  <i id="close-house-menu" class="fa fa-remove fa-fw fa-3x"></i>
 
-  <div class="food">
-    <div class="breakfast"></div>
-    <div class="lunch"></div>
-    <div class="sides"></div>
-  </div>
+  <h1 class="text-center">MENU</h1>
 
-  <div class="drinks">
+  <div id="food" class="food">
+    <h2 class="text-center">Meals</h2>
+    <div id="breakfast" class="breakfast">
+      <h3 class="text-center">Breakfast</h3>
+      <% get_breakfast.each do |item| %>
+        <%= raise issue %>
+      <% end %>
+    </div>
+    <div id="lunch" class="lunch">
+      <h3 class="text-center">Lunch</h3>
+    </div>
+    <div id="desert" class="desert">
+      <h3 class="text-center">Desert</h3>
+    </div>
+  </div> <!-- Meals -->
 
-  </div>
+  <div id="drinks" class="drinks">
+    <h2 class="text-center">Drinks</h2>
+    <div id="beer" class="beer">
+      <h3 class="text-center">Beer</h3>
+    </div>
 
-</div>
+    <div id="wine" class="wine">
+      <h3 class="text-center">Wine</h3>
+    </div>
+
+    <div id="coffee" class="coffee">
+      <h3 class="text-center">Hot Drinks</h3>
+    </div>
+
+  </div> <!-- drinks  -->
+
+</div> <!-- house-menu  -->

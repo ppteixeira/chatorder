@@ -19,16 +19,7 @@
 //= require_tree .
 
 $(document).ready(function () {
-  // Closes the sidebar menu
-  $("#menu-close").click(function(e) {
-      e.preventDefault();
-      $("#sidebar-wrapper").toggleClass("active");
-  });
-  // Opens the sidebar menu
-  $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#sidebar-wrapper").toggleClass("active");
-  });
+
   // Scrolls to the selected menu item on the page
   $(function() {
       $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
@@ -91,23 +82,5 @@ $(document).ready(function () {
   $('.map').on('click', onMapClickHandler);
 
 
-  // Button to generate new key (pin) to a chat room.
-  $( '.btn-key' ).click(function(event) {
-    event.preventDefault();  // Prevent the button to send the form
 
-    var id = $(this).closest('li').attr('id');
-    var options = { // Details to connect to the server
-      url: '/change_pin',
-      method: 'post',
-      data: { table_id: $(this).closest('li').attr('id') }
-    }
-
-    var show_pin = function(response) { // function that
-      //look up for right id and write response
-      $('#'+id).find('.pin').text(response)
-    }
-    $.ajax(options).done(show_pin);
-  });
-
-  
 })

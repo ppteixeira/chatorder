@@ -14,7 +14,7 @@
         <% end %>
         <% if user_signed_in? && current_user.user_type == 'admin' %>
           <li>
-            <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
+            <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :onclick => "$('#menu-close').click()" %>
           </li>
           <li>
               <a href="/tables" onclick=$("#menu-close").click();>Tables</a>
@@ -27,8 +27,8 @@
             <a href="#about" onclick=$("#menu-close").click();>About</a>
         </li>
 
-        <li>
-            <a href="#portfolio" onclick=$("#menu-close").click();>Menu</a>
+        <li id="restaurant-menu">
+            <a href="#" onclick=$("#menu-close").click();>Menu</a>
         </li>
         <li>
             <a href="#contact" onclick=$("#menu-close").click();>Contact</a>

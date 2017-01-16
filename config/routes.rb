@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   #Show all tables
   get '/tables', to: 'pages#tables'
 
+  #Get menu items
+  get '/get_menu', to: 'api/items#get_menu'
+
   post '/change_pin', to: 'api/chat_rooms#change_pin'
   post '/check_pin', to: 'chat_rooms#check_pin'
 
