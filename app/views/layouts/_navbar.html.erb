@@ -4,14 +4,15 @@
 <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
         <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-        <% if user_signed_in? %>
-          Logged in as <%= current_user.name %>
-          <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-          <%= link_to 'Chat', chat_rooms_path %>
         <li class="sidebar-brand logged-user">
-            Logged in as <%= current_user.username.upcase %>
+          <a href="/#top" onclick=$("#menu-close").click();>Home</a>
         </li>
+        <% if user_signed_in? %>
+          <li>
+            Logged in as <%= current_user.username.upcase %>
+          </li>
         <% end %>
+
         <% if user_signed_in? && current_user.user_type == 'admin' %>
           <li>
             <%= link_to 'Logout', destroy_user_session_path, :method => :delete, :onclick => "$('#menu-close').click()" %>
@@ -19,19 +20,23 @@
           <li>
               <a href="/tables" onclick=$("#menu-close").click();>Tables</a>
           </li>
+          <li>
+            <%= link_to 'Create chat room', new_chat_room_path , :onclick => "$('#menu-close').click()"%>
+          </li>
         <% end %>
         <li>
-            <a href="#top" onclick=$("#menu-close").click();>Home</a>
+            <a href="/#top" onclick=$("#menu-close").click();>Home</a>
         </li>
         <li>
-            <a href="#about" onclick=$("#menu-close").click();>About</a>
+            <a href="/#about" onclick=$("#menu-close").click();>About</a>
         </li>
 
         <li id="restaurant-menu">
             <a href="#" onclick=$("#menu-close").click();>Menu</a>
         </li>
         <li>
-            <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
+            <a href="/#contact" onclick=$("#menu-close").click();>Contact</a>
         </li>
+
     </ul>
 </nav>
