@@ -21,6 +21,9 @@
 
 .open-hours {
   list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin: 2em;
 }
 
 .callout-layer {
@@ -38,9 +41,19 @@
 
 .top-title {
   color: #FFF;
-  margin: 20em 0em 0em 8em;
+
+  text-shadow: 3px 2px black;
 
   h1{
     font-size: 4em;
   }
+}
+
+#pin-code , #check-pin-btn{
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+#open-hours {
+  background-color: #541010;
 }
